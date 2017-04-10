@@ -16,8 +16,8 @@ def calculate_selling_point(recent_highest_price = 0, today_opening_price = 0):
     recent_highest_price = int(input("The recent highest price is: "))
     today_opening_price = int(input("Today's opening price is: "))
 
-    # calculate and print selling point
-    if recent_highest_price * 0.9 < today_opening_price * 0.95:
+    # calculate and print selling point, will be the higher one in two situations
+    if recent_highest_price * 0.9 > today_opening_price * 0.95:
         selling_point = recent_highest_price * 0.9
     else:
         selling_point = today_opening_price * 0.95
